@@ -22,11 +22,44 @@ Program to implement the linear regression using gradient descent.
 Developed by: SRI SAI PRIYA.S
 RegisterNumber: 212222240103
 */
-
-
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+def linear_regression(X1,y,learning_rate=0.1,num_iters=1000):
+  X=np.c_[np.ones(len(X1)),X1]
+  theta=np.zeros(X.shape[1]).reshape(-1,1)
+  for _ in range(num_iters):
+    predictions=(X).dot(theta).reshape(-1,1)
+    errors=(predictions-y).reshape(-1,1)
+    theta-=learning_rate*(1/len(X1))*X.T.dot(errors)
+    return theta
+  data=pd.read_csv("/content/50_Startups.csv")
+  data.head()
 ```
-
+```
+x=(data.iloc[1:,:-2].values)
+x1=x.astype(float)
+scaler=StandardScaler()
+y=(data.iloc[1:,-1].values).reshape(-1,1)
+x1_scaled=scaler.fit_transform(x1)
+y1_scaled=scaler.fit_transform(y)
+print(x)
+print(x1_scaled)
+```
 ## Output:
+
+data.head() 
+
+![image](https://github.com/SriSaiPriyaSenthilvel/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119475702/abfdd69d-91eb-4bee-8eed-1d656f8a4750)
+
+![image](https://github.com/SriSaiPriyaSenthilvel/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119475702/21af59b9-e77b-4c68-bb8d-7bf2496e93ca)
+
+![image](https://github.com/SriSaiPriyaSenthilvel/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119475702/d16bc62b-9b4e-4317-8083-bacac49714ac)
+
+
+
+
+
 
 
 
