@@ -22,6 +22,8 @@ Program to implement the linear regression using gradient descent.
 Developed by: SRI SAI PRIYA.S
 RegisterNumber: 212222240103
 */
+```
+```
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -56,12 +58,9 @@ data.head()
 
 ![image](https://github.com/SriSaiPriyaSenthilvel/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119475702/d16bc62b-9b4e-4317-8083-bacac49714ac)
 
+![image](https://github.com/SriSaiPriyaSenthilvel/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119475702/0e05923c-1cab-45e0-b203-f4f18295efb6)
 
-
-
-
-
-
+![image](https://github.com/SriSaiPriyaSenthilvel/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/119475702/56afb4b2-cdb8-49a2-98f0-f217718368d9)
 
 ## Result:
 Thus the program to implement the linear regression using gradient descent is written and verified using python programming.
